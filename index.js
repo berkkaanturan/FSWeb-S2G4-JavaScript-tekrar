@@ -92,6 +92,7 @@ console.log(CemberinAlani(15,pi)); // 706.8575
 		💡 İPUCU: Tekrar edilen sayıları ve kaç kere tekrar edildiğini kaydetmek için bir nesne tanımlamalısınız, bu görevi yapabilmek için en az 2 kere döngü yazmalısınız. Birinci döngüde hangi sayının kaç kere tekrar edildiğini tespit edip, 2. döngüde stringi oluşturup verilen diziye aktarmalısınız.
 */
 
+console.log(sayilar.length); // 1000
 /*  (oto test yok) sayilar dizisi içinde kaç adet sayı olduğunu konsola yazdırın */
 
 let ucetambolunenler,
@@ -104,19 +105,41 @@ let ucetambolunenler,
 
 // 3a çözümü
 
-/* kodlar buraya */
+for(i=0; i<sayilar.length; i++){
+  if(sayilar[i] > enbuyuk || enbuyuk === undefined){
+    enbuyuk = sayilar[i];
+  }
+  if(sayilar[i] < enkucuk || enkucuk === undefined){
+    enkucuk = sayilar[i];
+  }
+} 
+console.log("En büyük sayı: " + enbuyuk);
+console.log("En küçük sayı: " + enkucuk);
 
 // 3b çözümü:
 
-/* kodlar buraya */
+ucetambolunenler = [];
+sayilar.forEach((sayi) => {
+  if(sayi % 3 === 0) {
+    ucetambolunenler.push(sayi);
+  }
+});
+
+console.log(ucetambolunenler);
 
 // 3c çözümü:
 
-/* kodlar buraya */
+ucebolunenlerintoplami = ucetambolunenler.reduce((toplam, sayi) => {
+  return toplam + sayi;
+}, 0);
 
+console.log(ucebolunenlerintoplami);
 // 3d çözümü
 
-/* kodlar buraya */
+besyuzdenkucuksayilar = sayilar.filter((sayi) => {
+  return sayi < 500;
+});
+console.log(besyuzdenkucuksayilar);
 
 // 3e çözümü
 
