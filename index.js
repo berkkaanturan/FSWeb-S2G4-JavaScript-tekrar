@@ -51,11 +51,10 @@ console.log(KareninAlani(10));
 	4. Hesaplanan çemberin çevresi döndürülecektir.
 */
 
-function CemberinCevresi(yaricap, pi) {
-  return (2 * pi * yaricap * yaricap);
+function CemberinCevresi(yaricap) {
+  return 2 * pi * yaricap;
 }
-
-console.log(CemberinCevresi(5, pi)); // 31.4159
+console.log(CemberinCevresi(5)); // 31.4159
 /* (Oto test yok) Yukarıdaki CemberinCevresi fonksiyonunu yarıçap = 5 vererek aşağıda çalıştırıp, sonucu konsolda gözlemleyin (console.log)  */
 
 /* 	GÖREV 2:  
@@ -105,7 +104,7 @@ let ucetambolunenler,
 
 // 3a çözümü
 
-for(i=0; i<sayilar.length; i++){
+for(let i=0; i<sayilar.length; i++){
   if(sayilar[i] > enbuyuk || enbuyuk === undefined){
     enbuyuk = sayilar[i];
   }
@@ -150,9 +149,9 @@ console.log(siralisayilar)
 // 3f çözümü
 
 tekraredensayilar = [];
-for(i=0; i<sayilar.length; i++){
+for(let i=0; i<sayilar.length; i++){
   let tekrarSayisi = 0;
-  for(j=0; j<sayilar.length; j++){
+  for(let j=0; j<sayilar.length; j++){
     if(sayilar[i] === sayilar[j]){
       tekrarSayisi++;
     }
