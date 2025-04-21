@@ -143,11 +143,25 @@ console.log(besyuzdenkucuksayilar);
 
 // 3e çözümü
 
-/* kodlar buraya */
-
+siralisayilar = besyuzdenkucuksayilar.sort((a,b) => {
+  return a - b;
+})
+console.log(siralisayilar)
 // 3f çözümü
 
-/* kodlar buraya */
+tekraredensayilar = [];
+for(i=0; i<sayilar.length; i++){
+  let tekrarSayisi = 0;
+  for(j=0; j<sayilar.length; j++){
+    if(sayilar[i] === sayilar[j]){
+      tekrarSayisi++;
+    }
+  }
+  if(tekraredensayilar.indexOf(sayilar[i]) === -1 && tekrarSayisi > 1){
+    tekraredensayilar.push(`${sayilar[i]} sayısı ${tekrarSayisi} kere tekrar edilmiştir`);
+  }
+}
+console.log(tekraredensayilar);
 
 /*  Bu satırın aşağısındaki kodları lütfen değiştirmeyin  */
 
